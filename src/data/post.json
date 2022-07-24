@@ -1,0 +1,142 @@
+[
+  {
+    "_id": "s101",
+    "txt": "Best trip ever",
+    "imgUrl": "http://some-img",
+    "createdAt": 123543452,
+    "by": {
+      "_id": "u101",
+      "fullname": "thespecialone",
+      "imgUrl": "http://some-img"
+    },
+    "loc": {
+      "lat": 11.11,
+      "lng": 22.22,
+      "name": "Tel Aviv"
+    },
+    "comments": [
+      {
+        "id": "c1001",
+        "by": {
+          "_id": "u105",
+          "fullname": "Bob",
+          "imgUrl": "http://some-img"
+        },
+        "txt": "good one!",
+        "likedBy": [
+          {
+            "_id": "u105",
+            "fullname": "Bob",
+            "imgUrl": "http://some-img"
+          }
+        ]
+      },
+      {
+        "id": "c1002",
+        "by": {
+          "_id": "u106",
+          "fullname": "Dob",
+          "imgUrl": "http://some-img"
+        },
+        "txt": "not good!"
+      },
+      {
+        "id": "c1002",
+        "by": {
+          "_id": "u106",
+          "fullname": "Dob",
+          "imgUrl": "http://some-img"
+        },
+        "txt": "not good!"
+      },
+      {
+        "id": "c1002",
+        "by": {
+          "_id": "u106",
+          "fullname": "Dob",
+          "imgUrl": "http://some-img"
+        },
+        "txt": "not good!"
+      }
+    ],
+    "likedBy": [
+      {
+        "_id": "u105",
+        "fullname": "Bob",
+        "imgUrl": "http://some-img"
+      },
+      {
+        "_id": "u106",
+        "fullname": "Dob",
+        "imgUrl": "http://some-img"
+      },
+      {
+        "_id": "u107",
+        "fullname": "Mob",
+        "imgUrl": "http://some-img"
+      },
+      {
+        "_id": "u108",
+        "fullname": "Lob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "tags":["fun", "kids"]
+  },
+  {
+    "_id": "s102",
+    "txt": "Great progress! ",
+    "imgUrl": "http://some-img",
+    "createdAt": 123543452,
+    "by": {
+      "_id": "u106",
+      "fullname": "coding 101",
+      "imgUrl": "http://some-img"
+    },
+    "loc": {
+      "lat": 11.11,
+      "lng": 22.22,
+      "name": "Tel Aviv"
+    },
+    "comments": [
+      {
+        "id": "c1001",
+        "by": {
+          "_id": "u105",
+          "fullname": "Bob",
+          "imgUrl": "http://some-img"
+        },
+        "txt": "good one!",
+        "likedBy": [
+          {
+            "_id": "u105",
+            "fullname": "Bob",
+            "imgUrl": "http://some-img"
+          }
+        ]
+      },
+      {
+        "id": "c1002",
+        "by": {
+          "_id": "u106",
+          "fullname": "Dob",
+          "imgUrl": "http://some-img"
+        },
+        "txt": "not good!"
+      }
+    ],
+    "likedBy": [
+      {
+        "_id": "u105",
+        "fullname": "Bob",
+        "imgUrl": "http://some-img"
+      },
+      {
+        "_id": "u106",
+        "fullname": "Dob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "tags":["fun", "kids"]
+  }
+]

@@ -1,0 +1,15 @@
+//SETUP
+@import 'setup/functions';
+@import 'setup/mixins';
+@import 'setup/variables';
+// BASICS
+@import 'basics/base';
+@import 'basics/helpers';
+
+//COMPONENTS
+@import 'components/main-header';
+@import 'components/main-footer';
+@import 'components/post-preview';
+@import 'components/post-list';
+@import 'components/main-app';
+@import 'components/add-img-modal';

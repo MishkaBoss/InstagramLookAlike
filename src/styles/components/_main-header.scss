@@ -1,0 +1,79 @@
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $clr-postBgColor;
+    height: rem(60px);
+
+    .header-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo-container {
+            width: rem(333.5px);
+            height: rem(29px);
+            margin-right: rem(20px);
+        }
+
+        img {
+            height: rem(30px);
+            margin-top: rem(3px);
+        }
+
+        .search-container {
+            display: flex;
+        }
+
+        .search {
+            position: absolute;
+            margin-block-start: rem(8px);
+            margin-inline-start: rem(18px);
+            height: rem(16px);
+            width: rem(16px);
+        }
+
+        input {
+            width: rem(260px);
+            border-radius: rem(8px);
+            height: rem(35px);
+            border: none;
+            background-color: $clr-inputColor;
+            padding-inline: rem(46px);
+            margin-right: rem(24px);
+            font-size: 16px;
+            line-height: rem(25px);
+
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .nav-bar-container {
+            display: flex;
+            align-items: stretch;
+            flex-shrink: 0;
+            padding-left: rem(42px);
+            margin-right: rem(22px);
+
+            >* {
+                margin-inline-start: rem(21px);
+
+
+            }
+
+            >*:not(:last-child) {
+                margin-top: rem(3px);
+            }
+
+            .user-img-header {
+                width: rem(25px);
+                height: rem(25px);
+                border-radius: 50%;
+            }
+        }
+
+    }
+}
