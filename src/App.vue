@@ -15,10 +15,10 @@ export default {
   components: {
     appHeader,
     appFooter,
-  }
-  // created () { 
-  //   ;
-  // },
+  },
+  created() {
+    this.$store.dispatch('loadPosts')
+  },
 }
 </script>
 

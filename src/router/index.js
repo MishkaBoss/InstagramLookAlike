@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import instaApp from '../views/insta-app.vue'
+import explorerPage from '../views/explorer-page.vue'
+import directPage from '../views/direct-page.vue'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -12,7 +14,7 @@ const router = createRouter({
     {
       path: '/direct',
       name: 'direct-msgs',
-      component: instaApp
+      component: directPage
     },
     {
       path: '/new-post',
@@ -22,7 +24,7 @@ const router = createRouter({
     {
       path: '/explore',
       name: 'explore',
-      component: instaApp
+      component: explorerPage
     },
     {
       path: '/notifications',

@@ -1,6 +1,7 @@
 <template>
     <div class="post-list-container" v-for="post in posts" :key="post._id">
-        <post-preview :post="post"></post-preview>
+        <post-preview @likedPost="$emit('likedPost', $event)" @removePost="$emit('removePost', $event)" :post="post">
+        </post-preview>
 
     </div>
 </template>
@@ -9,9 +10,14 @@
 import postPreview from './post-preview.cmp.vue'
 import postsData from '../data/post.json'
 export default {
+    emits: ['likedPost', 'removePost'],
+
+    props: {
+        posts: Array
+    },
     data() {
         return {
-            posts: postsData
+
         }
     },
     components: {

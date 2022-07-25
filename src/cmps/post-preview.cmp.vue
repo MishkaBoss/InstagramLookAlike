@@ -5,21 +5,22 @@
                 <p class="user-img">
                     <img class="story-circle" src="../styles/img/user-image-story-circle.png" alt="">
                     <span class="span">
-                        <img class="user-img-post" src="../styles/img/users/user2.jpg" alt="">
+                        <img class="user-img-post" :src="post.by.imgUrl" alt="">
                     </span>
                 </p>
                 <p class="user-name">{{ post.by.fullname }}</p>
             </div>
             <div class="right-header">
-                <more-options-icon></more-options-icon>
+                <more-options-icon @click="$emit('removePost', post._id)"></more-options-icon>
             </div>
         </div>
         <div class="post-body">
-            <img class="post-img" src="../styles/img/1.jpeg">
+            <img class="post-img" :src="post.imgUrl">
             <div class="post-actions">
                 <div class="left-actions">
                     <a>
-                        <notifications-icon></notifications-icon>
+                        <notifications-icon @click="doLike" :isLiked="isLiked">
+                        </notifications-icon>
                     </a>
                     <a>
                         <comment-icon></comment-icon>
@@ -69,10 +70,29 @@ import moreOptionsIcon from '../assets/icons/more-options-icon.cmp.vue'
 
 
 export default {
+    emits: ['likedPost', 'removePost'],
     props: {
         post: {
             type: Object,
         },
+    },
+    data() {
+        return {
+        }
+    },
+    created() {
+
+    }, methods: {
+        doLike() {
+            this.$emit('likedPost', this.post._id)
+        }
+    },
+    computed: {
+        isLiked() {
+            let loggedInUser = this.$store.getters.user
+            let idx = this.post.likedBy.findIndex(user => user._id === loggedInUser._id)
+            return idx === -1 ? false : true
+        }
     },
     components: {
         notificationsIcon,
